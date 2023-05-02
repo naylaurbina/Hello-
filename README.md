@@ -14,7 +14,7 @@ on:
 
   push:
 
-    branches:
+     branches:
 
       - main
 
@@ -26,7 +26,7 @@ jobs:
 
      steps:
 
-    - uses: actions/checkout@main
+      uses: actions/checkout@main
 
     - name: Deploy to Azure Web App
 
@@ -34,8 +34,8 @@ jobs:
 
       with:
 
-      #app-name: CMST385-murbinalizama
+       app-name: CMST385-murbinalizama
 
-        slot-name: 'production'
+                  slot-name: 'production'
 
-      # publish-profile: ${{ secrets.AppServiceCMST385 }}
+     # publish-profile: ${{ secrets.AppServiceCMST385 }}
