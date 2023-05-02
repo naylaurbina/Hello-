@@ -28,7 +28,7 @@ jobs:
 
       uses: actions/checkout@main
 
-    - name: Deploy to Azure Web App
+      name: Deploy to Azure Web App
 
       uses: azure/webapps-deploy@v1
 
@@ -36,6 +36,6 @@ jobs:
 
        app-name: CMST385-murbinalizama
 
-                  slot-name: 'production'
+       slot-name: 'production'
 
-     # publish-profile: ${{ secrets.AppServiceCMST385 }}
+# publish-profile: ${{ secrets.AppServiceCMST385 }}
