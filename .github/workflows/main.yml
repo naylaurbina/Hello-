@@ -13,21 +13,18 @@ branches:
   - main
 jobs:
 
-build-and-deploy:
+    build-and-deploy:
 
-runs-on: windows-latest
+      runs-on: windows-latest
+      steps:
+      - uses: actions/checkout@main
+      - name: Deploy to Azure Web App
 
- steps:
+      -uses: azure/webapps-deploy@v1
 
-- uses: actions/checkout@main
+        with:
 
-- name: Deploy to Azure Web App
-
-  uses: azure/webapps-deploy@v1
-
-  with:
-
-  #app-name: CMST385-murbinalizama
+ #app-name: CMST385-murbinalizama
 
     slot-name: 'production'
 
